@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 18px;
+        }
+        .rahmen {
+            margin: 48px;
+            padding: 24px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+        }
+        form.changeApp {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px;
+            border: none;
+            background-color: #eee;
+        }
+        [type='submit'] {
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<h1>Für Gerät mit aktueller Firmware eingestellt (Port: <a href="http://lebe.dyndns-at-home.com:200/screen" target="_blank">200</a>)!!!</h1>
+
+
+
+<form class="rahmen">
+	<h1>api/custom (App1)</h1>
+	<input id="url" type="hidden" name="url" value="api/custom?name=App1">
+		
+	
+	<input list="placements" name="text">
+	<datalist id="placements">
+		<option value="Bitte klopfen"></option>
+		<option value="in 10 Minuten zurück"></option>
+		<option value="in 30 Minuten zurück"></option>
+		<option value="außer Haus"></option>
+		<option value="im Gespräch"></option>
+	</datalist>
+	<br>
+	<select name="scrollSpeed">
+		<option value="20">langsam</option>
+		<option value="60" selected>mittel</option>
+		<option value="100">schnell</option>
+	</select>
+	<br>
+	<select name="color">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	<select name="effect">
+		<option value="">-</option>
+		<option value="TwinklingStars">TwinklingStars</option>
+		<option value="PlasmaCloud">PlasmaCloud</option>
+		<option value="ColorWaves">ColorWaves</option>
+		<option value="Matrix">Matrix</option>
+		<option value="SwirlOut">SwirlOut</option>
+		<option value="LookingEyes">LookingEyes</option>
+		<option value="BrickBreaker">BrickBreaker</option>
+		<option value="PingPong">PingPong</option>
+	</select>
+	<br>
+	<input type="checkbox" name="rainbow" value="true">
+	<br>
+	<select name="icon">
+		<option value="">-</option>
+		<option value="87">Smiley</option>
+		<option value="148">Skull</option>
+		<option value="7747">Real Pacman Ghost</option>
+X		<option value="26805">NOschool</option>
+X		<option value="4220">Red Warning</option>
+		<option value="11226">Alarm</option>
+		<option value="60171">NBS-Logo</option>
+		<option value="3253">Bier</option>
+		<option value="4007">Tetris</option>
+		<option value="3637">Pacman</option>
+		<option value="469">neutrale Zeiten</option>
+		<option value="24443">party-parrot</option>
+		<option value="25780">Deutschland</option>
+	</select>
+	<br>
+	<select name="pushIcon">
+		<option value="0">icon nicht verschieben</option>
+		<option value="1">1 mal</option>
+		<option value="2">immer</option>
+	</select>
+	<br>
+	<select name="textCase">
+		<option value="0">global</option>
+		<option value="1">groß</option>
+		<option value="2" selected="">wie gesendet</option>
+	</select>
+	<br>
+	<select name="blinkText">
+		<option value="" selected="">kein blinken</option>
+		<option value="300">langsam</option>
+		<option value="170">mittel</option>
+		<option value="50">schnell</option>
+	</select>
+	<br>
+	<select name="fadeText">
+		<option value="" selected="">kein ein-ausblenden</option>
+		<option value="1000">langsam</option>
+		<option value="500">mittel</option>
+		<option value="100">schnell</option>
+	</select>
+	<br>
+	<select name="repeat">
+		<option value="-1" selected="">für immer wiederholen</option>
+		<option value="1">1 mal</option>
+		<option value="10">10</option>
+		<option value="20">20</option>
+	</select>
+	<br>
+	<input type="checkbox" name="noScroll" value="true">
+	<br>
+	
+	<select id="overlays" name="overlay">
+		<option value="clear">clear</option>
+		<option value="snow">snow</option>
+		<option value="rain">rain</option>
+		<option value="frost">frost</option>
+		<option value="thunder">thunder</option>
+		<option value="drizzle">drizzle</option>
+	</select>
+	<br>
+	<input type="hidden" name="stack" value="false">
+	<button value="Submit" type="submit">Aktualisieren</button>
+</form>
+
+
+<form class="rahmen">
+	<h1>api/custom (App2)</h1>
+	<input id="url" type="hidden" name="url" value="api/custom?name=App2">
+		
+	
+	<input list="placements" name="text">
+	<datalist id="placements">
+		<option value="Bitte klopfen"></option>
+		<option value="in 10 Minuten zurück"></option>
+		<option value="in 30 Minuten zurück"></option>
+		<option value="außer Haus"></option>
+		<option value="im Gespräch"></option>
+	</datalist>
+	<br>
+	<select name="scrollSpeed">
+		<option value="20">langsam</option>
+		<option value="60" selected>mittel</option>
+		<option value="100">schnell</option>
+	</select>
+	<br>
+	<select name="color">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	<select name="effect">
+		<option value="">-</option>
+		<option value="TwinklingStars">TwinklingStars</option>
+		<option value="PlasmaCloud">PlasmaCloud</option>
+		<option value="ColorWaves">ColorWaves</option>
+		<option value="Matrix">Matrix</option>
+		<option value="SwirlOut">SwirlOut</option>
+		<option value="LookingEyes">LookingEyes</option>
+		<option value="BrickBreaker">BrickBreaker</option>
+		<option value="PingPong">PingPong</option>
+	</select>
+	<br>
+	<input type="checkbox" name="rainbow" value="true">
+	<br>
+
+	<input type="hidden" name="stack" value="false">
+	<button value="Submit" type="submit">Aktualisieren</button>
+</form>
+
+<form class="rahmen">
+	<h1>api/settings (Time App)</h1>
+	<input id="url" type="hidden" name="url" value="api/settings">
+	(Time app Farbe)
+	<br>
+	<select name="TIME_COL">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	(calendar header color-funktioniert nur bei timestyle 1)
+	<br>
+	<select name="CHCOL">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000" selected="">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	(calendar body color)
+	<br>
+	<select name="CBCOL">
+		<option value="ffffff" selected="">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	(calendar text color)
+	<br>
+	<select name="CTCOL">
+		<option value="ffffff">weiß</option>
+		<option value="000000" selected="">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	(Timestyles)
+	<br>
+	<select name="TMODE">
+		<option value="0">0</option>
+		<option value="1" selected="">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+	</select>
+	<br>
+	(Timeformats)
+	<br>
+	<select name="TFORMAT">
+		<option value="%H:%M:%S">13:30:45 </option>
+		<option value="%l:%M:%S ">1:30:45</option>
+		<option value="%H:%M">13:30</option>
+		<option value="%H %M">13.30 with blinking colon</option>
+		<option value="%l:%M">1:30</option>
+		<option value="%l %M">1:30 with blinking colon</option>
+		<option value="%l:%M %p">1:30 PM</option>
+		<option value="%l %M %p">1:30 PM with blinking colon</option>
+	</select>
+	<br>
+	(anschließender reboot vorausgesetzt):
+	<br>
+	<select name="TIM">
+		<option value="true" selected="">Time app anzeigen</option>
+		<option value="false">Time app ausblenden</option>
+	</select>
+		<br>
+	<input type="hidden" name="stack" value="false">
+	<button value="Submit" type="submit">Aktualisieren</button>
+</form>
+
+<form class="rahmen">
+	<h1>api/power</h1>
+	<p>Schaltet nur das Display aus, nicht aber die Live-View.</p>
+	<input id="url" type="hidden" name="url" value="api/power">
+		
+	<select name="power">
+		<option value="true">anschalten</option>
+		<option value="false">ausschalten</option>
+	</select>
+	<br>
+	<button value="Submit" type="submit">Aktualisieren</button>
+</form>
+
+<!--
+<form class="rahmen">
+	<h1>api/moodlight</h1>
+	<p>vorsicht vor Hitzeentwicklung<br>
+	Helligkeit kann im Abschnitt Settings eingestellt werden</p>
+	<input id="url" type="hidden" name="url" value="api/moodlight">
+	<select name="color">
+		<option value="[155,38,182]">weiß</option>
+		<option value="1000">schwarz</option>
+		<option value="1500" selected="">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<select name="brightness">
+		<option value="170">weiß</option>
+		<option value="200">schwarz</option>
+		<option value="220" selected="">rot</option>
+		<option value="150">grün</option>
+		<option value="100">blau</option>
+	</select>
+	<br>
+	<button value="Submit" type="submit">Aktualisieren</button>
+</form>
+-->
+
+
+<form class="rahmen">
+	<h1>api/settings</h1>
+	<input id="url" type="hidden" name="url" value="api/settings">
+		
+	(Dauer der Übergänge)<br>
+	<input type="range" name="TSPEED" min="100" max="2000" step="100" value="500"><br>
+	<select name="ATRANS">
+		<option value="true">automatischer App-Wechsel</option>
+		<option value="false" selected="">Kein automatischer App-Wechsel</option>
+	</select>
+	<br>
+	(Übergangseffekt)
+	<br>
+	<select name="TEFF">
+		<option value="0">Random</option>
+		<option value="1" selected="">Slide</option>
+		<option value="2">Dim</option>
+		<option value="3">Zoom</option>
+		<option value="4">Rotate</option>
+		<option value="5">Pixelate</option>
+		<option value="6">Curtain</option>
+		<option value="7">Ripple</option>
+		<option value="8">Blink</option>
+		<option value="9">Reload</option>
+		<option value="10">Fade</option>
+	</select>
+	<br>
+	(Dateformats)
+	<br>
+	<select name="DFORMAT">
+		<option value="%d.%m.%y">16.04.22</option>
+		<option value="%d.%m">16.04</option>
+		<option value="%y-%m-%d">22-04-16</option>
+		<option value="%m-%d">04-16</option>
+		<option value="%m/%d/%y">04/16/22</option>
+		<option value="%m/%d">04/16</option>
+		<option value="%d/%m/%y">16/04/22</option>
+		<option value="%d/%m">16/04</option>
+		<option value="%m-%d-%y">04-16-22</option>
+	</select>
+	<br>
+	(Helligkeit)
+	<br>
+	<input type="range" min="1" max="255" step="10" name="BRI" value="230">
+	<br>
+	(Date app Farbe)
+	<br>
+	<select name="DATE_COL">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	(Temperature app Farbe)
+	<br>
+	<select name="TEMP_COL">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	(Humidity app Farbe)
+	<br>
+	<select name="HUM_COL">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	(Battery app Farbe)
+	<br>
+	<select name="BAT_COL">
+		<option value="ffffff">weiß</option>
+		<option value="000000">schwarz</option>
+		<option value="ff0000">rot</option>
+		<option value="00ff00">grün</option>
+		<option value="0000ff">blau</option>
+		<option value="ffff00">gelb</option>
+	</select>
+	<br>
+	<button value="Submit" type="submit">Aktualisieren</button>
+</form>
+
+
+
+
+<div  class="rahmen">
+	<h1>App wechseln</h1>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/previousapp">
+		<button value="Submit" type="submit">Vorherige App</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/nextapp">
+		<button value="Submit" type="submit">Nächste App</button>
+	</form>
+</div>
+
+
+
+
+
+<div  class="rahmen">
+	<h1>App anzeigen</h1>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/switch">
+		<input type="hidden" name="name" value="App1">
+		<button value="Submit" type="submit">App1 anzeigen</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/switch">
+		<input type="hidden" name="name" value="App2">
+		<button value="Submit" type="submit">App2 anzeigen</button>
+	</form>
+	<br>(Reboot required)(api/settings):<br>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="HUM" value="true">
+		<button value="Submit" type="submit">Humidity app anzeigen</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="DAT" value="true">
+		<button value="Submit" type="submit">Date app anzeigen</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="TEMP" value="true">
+		<button value="Submit" type="submit">Temperature app anzeigen</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="BAT" value="true">
+		<button value="Submit" type="submit">Battery app anzeigen</button>
+	</form>
+</div>
+
+
+
+<div  class="rahmen">
+	<h1>App entfernen</h1>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/custom?name=App1">
+		<button value="Submit" type="submit">App1 entfernen</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/custom?name=App2">
+		<button value="Submit" type="submit">App2 entfernen</button>
+	</form>
+	<br>(Reboot required)(api/settings):<br>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="HUM" value="false">
+		<button value="Submit" type="submit">Humidity app ausblenden</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="DAT" value="false">
+		<button value="Submit" type="submit">Date app ausblenden</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="TEMP" value="false">
+		<button value="Submit" type="submit">Temperature app ausblenden</button>
+	</form>
+	<form class="changeApp">
+		<input id="url" type="hidden" name="url" value="api/settings">
+		<input type="hidden" name="BAT" value="false">
+		<button value="Submit" type="submit">Battery app ausblenden</button>
+	</form>
+</div>
+
+
+
+
+
+<form class="rahmen">
+	<h1>api/resetSettings</h1>
+	<p>Anschließend muss die Live-View neu geladen werden</p>
+	<input id="url" type="hidden" name="url" value="api/resetSettings">
+	<button value="Submit" type="submit">Reset</button>
+</form>
+
+<form class="rahmen">
+	<h1>api/reboot</h1>
+	<p>Anschließend muss die Live-View neu geladen werden<br>
+	Ein Reboot dauert etwa 15sek.</p>
+	<input id="url" type="hidden" name="url" value="api/reboot">
+	<button value="Submit" type="submit">Reboot</button>
+</form>
+
+<form class="rahmen">
+	<h1>api/sound</h1>
+	<input id="url" type="hidden" name="url" value="api/sound">
+	<input type="hidden" name="sound" value="Zildjian Sound Lab 10 S Family Mini Hats.mp3">
+	<button value="Submit" type="submit">Sound abspielen</button>
+</form>
+
+<form class="rahmen">
+	<h1>api/sound</h1>
+	<input id="url" type="hidden" name="url" value="api/settings">
+	<input type="range" min="0" max="30" step="1" name="VOL">
+	<button value="Submit" type="submit">Lautstärke verändern</button>
+</form>
+
+
+
+<script>
+	async function postData(url = "", data = {}) {
+		// Default options are marked with *
+		const response = await fetch(url, {
+			method: "POST", // *GET, POST, PUT, DELETE, etc.
+			body: JSON.stringify(JSON.parse(JSON.stringify(data), (k, v) => v === "true" ? true : v === "false" ? false : v)), // body data type must match "Content-Type" header
+		});
+		return response.text(); // parses JSON response into native JavaScript objects
+	}
+
+
+	document.querySelectorAll('form').forEach(f => {
+		
+	    f.addEventListener('submit', (event) => {
+			event.preventDefault();
+		
+			var formdata = Array.from(new FormData(event.srcElement).entries())
+			data = formdata.reduce((m, [key, value]) => Object.assign(m, {
+					[key]: value
+				}), {})
+				
+			console.log(data);
+	
+			//postData("http://10.31.193.228/" + formdata[0][1], data);
+			postData("http://192.168.0.21/" + formdata[0][1], data);
+	    })
+
+	})
+</script>
+
+</body>
+</html>
