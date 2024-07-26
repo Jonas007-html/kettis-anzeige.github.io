@@ -6,6 +6,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
+        :root {
+            --select-border: #777;
+            --select-focus: blue;
+            --select-arrow: var(--select-border);
+        }
         *{
             font-family: poppins;
         }
@@ -14,12 +19,180 @@
             padding: 0;
             box-sizing: border-box;
         }
+        h1{
+            text-align: center;
+        }
+        select{
+            background: blue;
+            color: white;
+            padding: 8px;
+            font-size: 1em;
+            border: 3px solid rgb(152, 152, 152);
+            border-radius: 8px;
+        }
+        select:focus:active:focus-within{
+            border-color: rgb(152, 152, 152);
+        }
+        .button-9 {
+            appearance: button;
+            backface-visibility: hidden;
+            background-color: #405cf5;
+            border-radius: 6px;
+            border-width: 0;
+            box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+            font-size: 100%;
+            height: 44px;
+            line-height: 1.15;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 5px;
+            margin-right: 5px;
+            outline: none;
+            overflow: hidden;
+            padding: 0 25px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            transform: translateZ(0);
+            transition: all .2s,box-shadow .08s ease-in;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-9:disabled {
+            cursor: default;
+        }
+
+        .button-9:focus {
+            box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+        }
+        .zentrieren{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .ausgeblendet{
+            display: none;
+        }
+        .linie{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #b6b6b6;
+            border-radius: 10px;
+            margin: 12px;
+            padding: 5px;
+        }
+        .zeiteingabe{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
-    <h1>hello world</h1>
+
+    <h1>Türschild Raum 416</h1>
+    
+    <div>
+        <div class="select">
+            <select id="standard-select">
+              <option value="Option 1">Information 1</option>
+              <option value="Option 2">Information 2</option>
+              <span class="focus"></span>
+            </select>
+        </div>
+        
+            <h3 class="zwischenueberschrift">Informationstext</h3>
+
+         <div class="zentrieren"> 
+                <form>
+                    <input id="url" type="hidden" name="url" value="api/custom?name=App1">
+                    <input type="hidden" name="text" value="außer Haus">
+                    <button class="button-9" id="button-9" role="button">außer Haus</button>
+                </form>
+
+                <form>
+                    <input id="url" type="hidden" name="url" value="api/custom?name=App1">
+                    <input type="hidden" name="text" value="bitte nicht stören">
+                    <button class="button-9" id="button-9" role="button">bitte nicht stören</button>
+                </form>
+                <form>
+                    <input id="url" type="hidden" name="url" value="api/custom?name=App1">
+                    <input type="hidden" name="text" value="gleich zurück">
+                    <button class="button-9" role="button">gleich zurück</button>
+                </form>
+                <form>
+                    <input id="url" type="hidden" name="url" value="api/custom?name=App1">
+                    <input type="hidden" name="text" value="Anwesend">
+                    <button class="button-9" role="button">Anwesend</button>
+                </form>
+           </div>
+            <!-- sonst funktioniert js nicht mehr einwandfrei
+            <div>
+                <form>
+                    <input id="url" type="hidden" name="url" value="api/custom?name=App1">
+                    <input type="hidden" name="text" value="um appt wieder erreichbar">
+                    <button>
+                        <label for="appt">um</label>
+                        <input type="time" id="value" name="text">
+                        <label for="appt">wieder erreichbar</label>
+                        <input type="text" name="text" id="demo">
+                    </button>
+                </form>
+            </div> -->
+            <div class="linie">
+                <form class="zeiteingabe">
+                    <label for="myP">ab</label>
+                    <input type="time" id="myP" name="text" value="10">
+                    <label for="myP">wieder erreichbar</label>
+                </form>
+                <form>
+                    <input id="url" type="hidden" name="url" value="api/custom?name=App1">
+                    <input id="anzeigetext" value="" name="text" class="ausgeblendet">
+                    <button class="button-9" id="button-9">abschicken</button>
+                </form>
+            </div>
+
+            <div class="linie">
+                <form class="zeiteingabe">
+                    <label for="myP">in Raum</label>
+                    <input type="text" id="myN" name="text" min="000" max="600" step="100">
+                </form>
+                <form>
+                    <input id="url" type="hidden" name="url" value="api/custom?name=App1">
+                    <input id="anzeigenummer" value="" name="text" class="ausgeblendet">
+                    <button class="button-9" id="button-9">abschicken</button>
+                </form>
+            </div>
+    </div>   
+    
+    
     <a href="html/index_original.html">zur originalwebsite</a>
     <script>
+        // autom uhrzeit
+        function zeiteingabe () {
+            let html = document.getElementById("myP").value;
+            document.getElementById("anzeigetext").value = 'ab '+ html + ' wieder erreichbar';
+            console.log(document.getElementById('anzeigetext').value);
+        }
+        setInterval(zeiteingabe, 500);
+        // autom Raum
+        function raumeingabe () {
+            let nummer = document.getElementById("myN").value;
+            document.getElementById("anzeigenummer").value = 'in Raum '+ nummer;
+            console.log(document.getElementById('anzeigetext').value);
+        }
+        setInterval(raumeingabe, 500);
+        // abschicken
         async function postData(url = "", data = {}) {
             // Default options are marked with *
             const response = await fetch(url, {
